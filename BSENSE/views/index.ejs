@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-    <title> Library/ Children Picture Books</title>
+    <title> BSENSE</title>
 </head>
 
 <body>
-
+<h1>BSENSE</h1>
     <div class="header"></div>
 
 
@@ -51,16 +51,16 @@
 
 
     <div class="grid-container">
-        <% for( let i = 0; i < books.length; i++ ) { %>
+        <% for( let i = 0; i < products.length; i++ ) { %>
         <div class="col-sm-4">
-            <h1 class="title"><%= books[i].name %> </h1>
-            <a href="/library/<%= books[i].id %>"><img src=" <%= books[i].img %>  " alt=""></a> <br>
-            Genre: <p><%= books[i].genre %> </p>
-            Price: <h3><%= books[i].price %></h3>
-            <form action="/library/<%= books[i].id%>?_method=DELETE" method="POST">
+            <h1 class="title"><%= products[i].name %> </h1>
+            <a href="/library/<%= products[i].id %>"><img src=" <%= products[i].img %>  " alt=""></a> <br>
+            Genre: <p><%= products[i].genre %> </p>
+            Price: <h3><%= products[i].price %></h3>
+            <form action="/library/<%= products[i].id%>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE" />
             </form>
-            <button class="btn btn-default"><a href="/library/<%= books[i].id %>/edit">EDIT</a></button>
+            <button class="btn btn-default"><a href="/library/<%= products[i].id %>/edit">EDIT</a></button>
 
         </div>
         <% } %>
