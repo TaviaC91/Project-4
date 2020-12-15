@@ -11,16 +11,16 @@
 <body>
     <div class= "container">
   <h6>
-    <form action="/library/<%= products.id%>?_method=PUT" method="POST">
+    <form action="/bsense/<%= products.id%>?_method=PUT" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" value="<%=Product.name%>"> <br>
         <label for="img">Image:</label>
         <input type="text" name="img" value="<%=product.img%>"> <br>
-        <label for="overview">Price</label>
+        <label for="price">Price</label>
         <input type="textarea" name="price" id="price" value="<%=product.price%>"> <br>
         <label for="genre">Categories:</label>
         <input type="text" name="categories" id="categories" value="<%=product.categories%>"> <br>
-        <label for="price">Designers:</label>
+        <label for="designers">Designers:</label>
         <input type="text" name="designers" id="designers" value="<%=product.designers%>"> <br>
         <input type="submit" value="Submit">
     </form>

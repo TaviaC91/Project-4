@@ -20,29 +20,29 @@
 
 
         <div class="nav-link-wrapper">
-            <a id="board" href="MENSWEAR">Menswear</a>
+            <a id="board" href="MENSWEAR">MENSWEAR</a>
         </div>
 
         <div class="nav-link-wrapper">
-            <a href="WOMENSWEAR">Womenswear</a>
+            <a href="WOMENSWEAR">WOMENSWEAR</a>
         </div>
 
         <div class="nav-link-wrapper">
-            <a href="EVERYTHING ELSE">Everything Else</a>
+            <a href="EVERYTHING ELSE">EVERYTHING ELSE</a>
         </div>
 
         <div class="nav-link-wrapper">
-            <a href="/library/new">New</a>
+            <a href="/library/new">NEW</a>
 
         </div>
 
         <div class="nav-link-wrapper">
-            <a href="SALE">Sale</a>
+            <a href="SALE">SALE</a>
         </div>
 
 
         <div class="nav-link-wrapper">
-            <a href="SEARCH">Search</a>
+            <a href="SEARCH">SEARCH</a>
         </div>
 
     </nav>
@@ -53,14 +53,15 @@
     <div class="grid-container">
         <% for( let i = 0; i < products.length; i++ ) { %>
         <div class="col-sm-4">
-            <h1 class="title"><%= products[i].name %> </h1>
-            <a href="/library/<%= products[i].id %>"><img src=" <%= products[i].img %>  " alt=""></a> <br>
-            Genre: <p><%= products[i].genre %> </p>
-            Price: <h3><%= products[i].price %></h3>
-            <form action="/library/<%= products[i].id%>?_method=DELETE" method="POST">
+            <h6 class="title"><%= products[i].name %> </h6>
+            <a href="/bsense/<%= products[i].id %>"><img src=" <%= products[i].img %>  " alt=""></a> <br>
+            Genre: <h6> <%= products[i].categories %> </h6>
+            Price: <h6><%= products[i].price %></h6>
+            designers <h6><%= products[i].designers %></h6>
+            <form action="/bsense/<%= products[i].id%>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE" />
             </form>
-            <button class="btn btn-default"><a href="/library/<%= products[i].id %>/edit">EDIT</a></button>
+            <button class="btn btn-default"><a href="/bsense/<%= products[i].id %>/edit">EDIT</a></button>
 
         </div>
         <% } %>

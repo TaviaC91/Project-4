@@ -27,11 +27,6 @@ db.on('connected', () => console.log('mongo connected: ', MongoURI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 
-/////////////CONTROLLERS//////////////////////////
-
-const bsenseController = require('./controllers/bsense.js')
-app.use(bsenseController)
-
 
 /////////////////////////MIDDLEWARE/////////////////////////
 
@@ -48,7 +43,10 @@ app.use(express.json());
 
 app.use(methodOverride('_method'));
 
+////////////CONTROLLERS//////////////////////////
 
+const bsenseController = require('./controllers/bsense.js')
+app.use(bsenseController)
 
 ///////LOCAL HOST 3000///////////
 
