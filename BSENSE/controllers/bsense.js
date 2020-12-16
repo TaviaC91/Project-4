@@ -37,9 +37,9 @@ products.get('/bsense', async (req, res) => {
 
   //////// SHOW ROUTE //////////////
 
-products.get('/bsense/:id/show', async (req, res) => {
+products.get('/bsense/show', async (req, res) => {
     try {
-      const products = await Products.findById(req.params.id)
+      const product = await Products.findById(req.params.id)
       res.render('../views/show.ejs', { product: product })
     } catch (err) {
       res.send('That isn\'t a valid id! <a href="/product">Go back</a>')
@@ -51,7 +51,7 @@ products.get('/bsense/:id/show', async (req, res) => {
 products.post('/bsense', async (req, res) => {
     try {
       const product = await Products.create(req.body)
-      res.redirect('/bsense')
+      res.redirect('/bsense'/ + product.id)
     } catch (err) {
       res.send(err.message)
     }

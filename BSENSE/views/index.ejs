@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/normalize.css">
-    <link rel="stylesheet" href="../src/skeleton.css">
+    <!-- <link rel="stylesheet" href="../public/img.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../skeleton.css">
     <title>BSENSE</title>
 </head>
 
 <body>
-    <h3>BSENSE</h3>
+    <h3 class="title">BSENSE</h3>
 </body>
 
 
-<div class="containernav">
+<div class="container-nav">
 
 
     <a id="board" href="MENSWEAR">MENSWEAR</a>
@@ -42,11 +44,11 @@
 
 
 
-<div class="grid-container"></div>
+<div class="container">
 <% for( let i = 0; i < products.length; i++ ) { %>
-<div class="col-sm-4">
+<div class="">
     <h6 class="title"><%= products[i].name %> </h6>
-    <a href="/bsense/<%= products[i].id %>"><img src=" <%= products[i].img %>  " alt=""></a> <br>
+    <a href="/bsense/<%= products[i].id %>"><img  src=" <%= products[i].img %> " class="img" alt=""></a> <br>
     Genre: <h6> <%= products[i].categories %> </h6>
     Price: <h6><%= products[i].price %></h6>
     designers <h6><%= products[i].designers %></h6>
@@ -54,11 +56,12 @@
         <input type="submit" value="DELETE" />
     </form>
 
-    <button class="btn btn-default"><a href="/bsense/<%= products[i].id %>/edit">EDIT</a></button>
+    <button class=".button"><a href="/bsense/<%= products[i].id %>/edit">EDIT</a></button>
 
 </div>
 <% } %>
 </div>
+<!-- </div> -->
 
 
 

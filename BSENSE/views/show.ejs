@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/normalize.css">
-    <link rel="stylesheet" href="../src/skeleton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../skeleton.css">
     <title>Products Page</title>
 </head>
 
@@ -13,11 +14,11 @@
     <div class="showcontainer">
      
         <div class="showdiv1">
-            <h2><%= products.name %></h2> <br>
+            <h2><%= product.name %></h2> <br>
 
-            <a href="/products/<%= products.id %> "><img src=" <%= products.img%>" alt=""> </a> <br>
+            <a href="/products/<%= product.id %> "><img src=" <%= product.img%>" alt=""> </a> <br>
             <h6>Price:</h6>
-            <h6><%= products.price %></h6> <br>
+            <h6><%= product.price %></h6> <br>
 
         
 
@@ -28,11 +29,11 @@
         <div class="showinfo">
     
             <p class="showgenre">
-            <h6>Price: <%= products.price %> </h6>
+            <h6>Price: <%= product.price %> </h6>
             </p>
 
             <p>
-               <h6> Categories: <%= products.categories %> </h6>
+               <h6> Categories: <%= product.categories %> </h6>
             </p>
 
             
