@@ -4,66 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../normalize.css">
-    <link rel="stylesheet" href="../skeleton.css">
+    <link rel="stylesheet" href="../src/normalize.css">
+    <link rel="stylesheet" href="../src/skeleton.css">
     <title>BSENSE</title>
 </head>
 
 <body>
-<h3>BSENSE</h3>
-    
+    <h3>BSENSE</h3>
+</body>
 
 
- 
+<div class="containernav">
 
 
-        
-            <a id="board" href="MENSWEAR">MENSWEAR</a>
-       
-
-   
-            <a href="WOMENSWEAR">WOMENSWEAR</a>
-        
-
-       
-            <a href="EVERYTHING ELSE">EVERYTHING ELSE</a>
-        
-
-       
-            <a href="/library/new">NEW</a>
-
-       
-
-    
-            <a href="SALE">SALE</a>
-     
-
-            <a href="SEARCH">SEARCH</a>
-       
-
-    </nav>
+    <a id="board" href="MENSWEAR">MENSWEAR</a>
 
 
+    <a href="WOMENSWEAR">WOMENSWEAR</a>
 
 
-    <div class="grid-container"></div>
-        <% for( let i = 0; i < products.length; i++ ) { %>
-        <div class="col-sm-4">
-            <h6 class="title"><%= products[i].name %> </h6>
-            <a href="/bsense/<%= products[i].id %>"><img src=" <%= products[i].img %>  " alt=""></a> <br>
-            Genre: <h6> <%= products[i].categories %> </h6>
-            Price: <h6><%= products[i].price %></h6>
-            designers <h6><%= products[i].designers %></h6>
-            <form action="/bsense/<%= products[i].id%>?_method=DELETE" method="POST">
-                <input type="submit" value="DELETE" />
-            </form>
+    <a href="EVERYTHING ELSE">EVERYTHING ELSE</a>
 
-            <button class="btn btn-default"><a href="/bsense/<%= products[i].id %>/edit">EDIT</a></button>
 
-        </div>
-        <% } %>
+    <a href="/Bsense/new">NEW</a>
+
+
+    <a href="SALE">SALE</a>
+
+
+    <a href="SEARCH">SEARCH</a>
+
+</div>
+
     </div>
-    
+
+
+
+
+
+<div class="grid-container"></div>
+<% for( let i = 0; i < products.length; i++ ) { %>
+<div class="col-sm-4">
+    <h6 class="title"><%= products[i].name %> </h6>
+    <a href="/bsense/<%= products[i].id %>"><img src=" <%= products[i].img %>  " alt=""></a> <br>
+    Genre: <h6> <%= products[i].categories %> </h6>
+    Price: <h6><%= products[i].price %></h6>
+    designers <h6><%= products[i].designers %></h6>
+    <form action="/bsense/<%= products[i].id%>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE" />
+    </form>
+
+    <button class="btn btn-default"><a href="/bsense/<%= products[i].id %>/edit">EDIT</a></button>
+
+</div>
+<% } %>
+</div>
+
 
 
 </html>

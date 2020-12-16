@@ -29,7 +29,7 @@ products.get('/bsense', async (req, res) => {
   
   /////////NEW ROUTE ////////////
 
-  products.get('/bsense/:id/new', (req, res) => {
+  products.get('/bsense/new', (req, res) => {
     res.render('../views/new.ejs')
   })
 
