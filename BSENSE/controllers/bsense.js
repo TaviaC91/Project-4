@@ -29,7 +29,7 @@ products.get('/bsense', async (req, res) => {
   
   /////////NEW ROUTE ////////////
 
-  products.get('/new', (req, res) => {
+  products.get('/bsense/:id/new', (req, res) => {
     res.render('../views/new.ejs')
   })
 
@@ -37,7 +37,7 @@ products.get('/bsense', async (req, res) => {
 
   //////// SHOW ROUTE //////////////
 
-products.get('/bsense/:id', async (req, res) => {
+products.get('/bsense/:id/show', async (req, res) => {
     try {
       const products = await Products.findById(req.params.id)
       res.render('../views/show.ejs', { product: product })
@@ -59,7 +59,7 @@ products.post('/bsense', async (req, res) => {
  
   /////// EDIT ROUTE ////////////
 
-products.get('/:id/edit', async (req, res) => {
+products.get('/bsense/:id/edit', async (req, res) => {
     try {
       const product = await Products.findById(req.params.id)
       res.render('../views/edit.ejs', { product: product })
