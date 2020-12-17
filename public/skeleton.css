@@ -377,6 +377,11 @@
   form {
     margin-bottom: 2.5rem; }
   
+  .categories {
+    padding: 0px auto;
+    text-align: center;
+    color: black;
+  }
   
   /* Utilities
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
