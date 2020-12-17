@@ -81,7 +81,17 @@ products.put('/bsense/:id', async (req, res) => {
     }
   })
   
- 
+  
+  //////DELETE ROUTE////////////////
+  
+products.delete('/bsense/:id', async (req, res) => {
+    try {
+      await Products.findByIdAndRemove(req.params.id)
+      res.redirect('/Bsense')
+    } catch (err) {
+      res.send(err.message)
+    }
+  })
 
 
 
