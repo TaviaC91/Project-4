@@ -5,7 +5,7 @@ const bsenseSchema = new mongoose.Schema({
     img: {String},
     price: {type: Number, required: true},
     categories: {type: String, required: true},
- 
+    discription: {type: String, required: true}
     
 },
 {timestamps: true})
