@@ -51,7 +51,7 @@ app.use(bsenseController)
 ///////LOCAL HOST 3000///////////
 
 app.get('/bsense' , (req, res) => {
-  res.render('index.ejs');
+  res.send('hello');
 });
 
 
