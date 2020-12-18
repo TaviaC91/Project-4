@@ -11,3 +11,6 @@ When you enter the site you will choose a product and it will take you to the sh
 You can also delete the product if it doesn't interest you, Or edit a page if you want a price match. 
 
 Enjoy shopping at BBSENSE, have a wonderful experience. 
+
+
+http://localhost:3000/bsense
